@@ -1,0 +1,213 @@
+/* ======== General Reset ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* ======== Video Background Section ======== */
+#header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #101010;
+  }
+  
+  #bg-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: blur(3px);
+    transform: scale(1.5)
+  }
+  
+  /* Optional: Overlay for better text readability */
+  #header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  /* ======== Container ======== */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 10px; /* Reduced from 40px to move navbar/logo up */
+  }
+  
+  /* ======== Navbar ======== */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Navbar Links */
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-shadow: -0.5px -0.5px 0 #000,  
+                 0.5px -0.5px 0 #000,
+                -0.5px  0.5px 0 #000,
+                 0.5px  0.5px 0 #000;
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+    transition: 0.3s;
+}
+  
+  nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #fde1a9;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.4s;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Menu Icons */
+  nav .fa-bars,
+  nav .fa-xmark {
+    font-size: 25px;
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+/* ======== Contact Us Section ======== */
+#contact {
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px 60px 20px; /* Remove large gap and ensure proper padding */
+    color: #fff;
+    margin-top: 0; /* Remove unnecessary margin */
+}
+
+.contact-header {
+    margin-bottom: 20px;
+}
+
+.contact-header h2 {
+    font-size: 36px;
+    color: #fde1a9;
+    margin-bottom: 15px;
+    
+}
+
+.contact-header p {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+/* Contact form container */
+.contact-form {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    
+}
+
+/* Form Row for First Name and Last Name (Same Level) */
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Form Group for individual fields */
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Input and Textarea fields */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #a96f13;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Textarea for Message Section */
+textarea {
+    height: 150px;
+}
+
+/* Button Style */
+.send-btn {
+    background-color: #a96f13;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #e3d218;
+}
+
+/* ======== Footer ======== */
+.footer {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.781);
+    backdrop-filter: blur(5px); /* glass effect */
+    -webkit-backdrop-filter: blur(5px); /* for Safari */
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    color: #eee;
+  }

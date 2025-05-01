@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Rajesh Kumar</title>
+    <link rel="stylesheet" href="CSS/resume.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <video autoplay muted loop id="bg-video">
+            <source src="videos/videoplayback.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="images/giphy.gif" alt="Coder Logo" class="logo"></a>
+                <ul id="sidemenu">
+                    <li><a href="about_me.html">About Me</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="certification.html">Certifications</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+
+        <!-- Resume Section -->
+        <section id="resume">
+            <div class="container resume-section">
+                <div class="resume-header">
+                    <h1><strong>My Resume</strong></h1>
+                    <a href="Rajesh Specialised CV.pdf" target="_blank" class="resume-btn">View CV</a>
+                </div>
+
+                <div class="resume-cards">
+
+                    <!-- Experience Section -->
+                    <div class="resume-card">
+                        <h2>Experience</h2>
+                        <div class="experience-entry">
+                            <div class="exp-container">
+                                <div class="exp-photo">
+                                    <img src="images/hotel booking webiste.png" alt="Profile Photo">
+                                </div>
+                                <div class="exp-content">
+                                    <div class="exp-header">
+                                        <div>
+                                            <strong>Hotel Booking Management Website</strong><br>
+                                            <em>Personal Project</em><br>
+                                        </div>
+                                        <div class="exp-location-date">
+                                            <span>LPU, Punjab</span><br>
+                                            <span>Aug 2024 - Onwards</span>
+                                        </div>
+                                    </div>
+                                    <ul class="exp-list">
+                                        <li>Developed a full-stack web application for hotel room booking using Flask (Python) as the backend and HTML/CSS/JavaScript for the frontend.</li>
+                                        <li>Built an admin dashboard to add/edit/delete hotels and rooms, and manage all bookings and users.</li>
+                                        <li>Designed a booking module allowing users to book hotel rooms with date and guest input.</li>
+                                        <li>Developed a responsive user interface with Bootstrap, ensuring smooth UX across devices.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="resume-card">
+                        <h2>Skills</h2>
+
+                        <!-- Programming Languages -->
+                        <h4>Programming Languages</h4>
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <div class="skill-item"><img src="images/skill/skill7.png" alt="C++" class="circle-img"><p class="skill-label">C++</p></div>
+                                <div class="skill-item"><img src="images/skill/skill6.png" alt="JAVA" class="circle-img"><p class="skill-label">JAVA</p></div>
+                                <div class="skill-item"><img src="images/skill/python.jpg" alt="Python" class="circle-img"><p class="skill-label">Python</p></div>
+                                <div class="skill-item"><img src="images/skill/skill3.png" alt="JavaScript" class="circle-img"><p class="skill-label">JavaScript</p></div>
+                            </div>
+                        </div>
+
+                        <!-- Tools -->
+                        <h4>Tools</h4>
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <div class="skill-item"><img src="images/skill/git.png" alt="Git" class="circle-img"><p class="skill-label">Git</p></div>
+                                <div class="skill-item"><img src="images/skill/figma.png" alt="Figma" class="circle-img"><p class="skill-label">Figma</p></div>
+                                <div class="skill-item"><img src="images/skill/skill4.png" alt="MySQL" class="circle-img"><p class="skill-label">MySQL</p></div>
+                            </div>
+                        </div>
+
+                        <!-- Full Stack Development -->
+                        <h4>Data Science</h4>
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <div class="skill-item"><img src="images/skill/skill1.png" alt="HTML" class="circle-img"><p class="skill-label">HTML</p></div>
+                                <div class="skill-item"><img src="images/skill/skill2.png" alt="CSS" class="circle-img"><p class="skill-label">CSS</p></div>
+                                <div class="skill-item"><img src="images/skill/excel.webp" alt="Excel" class="circle-img"><p class="skill-label">Excel</p></div>
+                                <div class="skill-item"><img src="images/skill/tableau.png" alt="tableau" class="circle-img"><p class="skill-label">tableau</p></div>
+                                <div class="skill-item"><img src="images/skill/hadoop.jpeg" alt="Hadoop" class="circle-img"><p class="skill-label">Hadoop</p></div>
+                                <div class="skill-item"><img src="images/skill/php.png" alt="PHP" class="circle-img"><p class="skill-label">PHP</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="resume-card">
+                        <h2>Achievements</h2>
+                        <div class="education-grid">
+
+                            <!-- College -->
+                            <div class="edu-item">
+                                <img src="images/education/HSBC.jpg" alt="College">
+                                <h5>Completed</h5>
+                                <h5>HSBC Technology India Data Hackathon</h5>
+                                <p>2024</p>
+                                
+                            </div>
+
+                            <!-- School 2 -->
+                            <div class="edu-item">
+                                <img src="images/education/Open.jpg" alt="School 2">
+                                <h5>GEO-OPEN-HACK 2024</h5>
+                                <h5>by Open-Earth-Monitor consortium.</h5>
+                                <p>2024</p>
+                            </div>
+
+                            <!-- School 1 -->
+                            <div class="edu-item">
+                                <img src="images/education/leetcode.jpg" alt="School 1">
+                                <h5>Leetcode</h5>
+                                <h5>Global Rank = 5,53,669</h5>
+                                <p>Since 2024</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Suraj Kumar. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="JS/resume.js"></script>
+</body>
+</html>

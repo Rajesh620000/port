@@ -1,0 +1,246 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+/* ======== Header with Video Background ======== */
+#header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #101010;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: blur(3px);
+    transform: scale(1.05)
+}
+
+/* Optional: Overlay for better text readability */
+#header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* ======== Container ======== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px; /* Reduced from 40px to move navbar/logo up */
+}
+
+/* ======== Navbar ======== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Navbar Links */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-shadow: -0.5px -0.5px 0 #000,  
+                 0.5px -0.5px 0 #000,
+                -0.5px  0.5px 0 #000,
+                 0.5px  0.5px 0 #000;
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #fde1a9;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Menu Icons */
+nav .fa-bars,
+nav .fa-xmark {
+    font-size: 25px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+/* ======== Header Text ======== */
+.header-text {
+    margin-top: 12%; /* Adjusted for better positioning */
+    font-size: 24px;
+}
+
+.header-text h1 {
+    font-size: 50px;
+}
+
+.header-text span {
+    color: #fde1a9;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
+}
+
+.header-text h4 {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #eee;
+    text-shadow: -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
+}
+
+/* Cursor Blink */
+.cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+    background-color: transparent;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ======== Responsive Styles ======== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        right: -150px;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        transition: 0.4s;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    nav ul.show {
+        right: 20px;
+    }
+
+    nav .fa-bars {
+        display: block;
+    }
+
+    nav .fa-xmark {
+        display: block;
+        align-self: flex-end;
+    }
+}
+.footer {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.781);
+    backdrop-filter: blur(5px); /* glass effect */
+    -webkit-backdrop-filter: blur(5px); /* for Safari */
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content p {
+    margin: 0;
+    color: #eee;
+}
+
+/* GIF Trigger in Bottom Right */
+.gif-trigger {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 20;
+}
+
+.gif-trigger img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gif-trigger img:hover {
+    transform: scale(1.1);
+}
+
+/* Pop-up Box */
+.gif-popup {
+    display: none;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 220px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+/* Optional fade-in */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
